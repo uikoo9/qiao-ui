@@ -1,0 +1,58 @@
+@use '../../base';
+
+// modal
+@mixin modal($modalWidth, $margin, $padding, $close) {
+  .modal-container {
+    z-index: 97;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.3);
+
+    .modal {
+      z-index: 98;
+      position: relative;
+      width: $modalWidth - (2 * $padding);
+      max-height: calc(100% - (2 * $margin));
+      overflow: auto;
+
+      margin: $margin auto;
+      padding: $padding;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+
+    .modal-close {
+      z-index: 99;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $close;
+      height: $close;
+      line-height: $close;
+
+      @include base.font($size: 24px, $align: center);
+      @include base.cursor();
+    }
+  }
+}
+
+.pc {
+  $modalWidth: 800px;
+  $margin: 60px;
+  $padding: 40px;
+  $close: 60px;
+
+  @include modal($modalWidth, $margin, $padding, $close);
+}
+
+.mobile {
+  $modalWidth: 14rem;
+  $margin: 2rem;
+  $padding: 1rem;
+  $close: 2rem;
+
+  @include modal($modalWidth, $margin, $padding, $close);
+}

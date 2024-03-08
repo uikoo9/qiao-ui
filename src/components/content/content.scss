@@ -1,0 +1,89 @@
+@use '../../base';
+
+// content
+@mixin content($contentHeight, $txtTop, $txtMainHeight, $txtOtherHeight) {
+  .content {
+    @include base.width();
+
+    height: $contentHeight;
+    border-bottom: base.$borderSolid;
+
+    .txt {
+      float: left;
+      width: 50%;
+      height: $contentHeight - $txtTop;
+      padding-top: $txtTop;
+
+      .txt-main {
+        @include base.width();
+        height: $txtMainHeight;
+        line-height: $txtMainHeight;
+
+        @include base.font($size: 32px, $align: center);
+      }
+
+      .txt-other {
+        @include base.width();
+        height: $txtOtherHeight;
+        line-height: $txtOtherHeight;
+
+        @include base.font($size: 16px, $align: center);
+      }
+    }
+
+    .pic {
+      float: left;
+      width: 50%;
+      height: $contentHeight;
+      background-color: rgb(235, 235, 235);
+    }
+  }
+}
+
+.pc {
+  $contentHeight: 600px;
+  $txtTop: 150px;
+  $txtMainHeight: 50px;
+  $txtOtherHeight: 80px;
+
+  @include content($contentHeight, $txtTop, $txtMainHeight, $txtOtherHeight);
+}
+
+.mobile {
+  $contentHeight: 6rem;
+  $txtMainHeight: 4rem;
+  $txtOtherHeight: 2rem;
+
+  .content {
+    @include base.width();
+
+    height: $contentHeight;
+    border-bottom: base.$borderSolid;
+
+    .txt {
+      @include base.width();
+
+      .txt-main {
+        @include base.width();
+
+        height: $txtMainHeight;
+        line-height: $txtMainHeight;
+        margin-bottom: -1rem;
+
+        @include base.font($size: 28px, $align: center);
+      }
+      .txt-other {
+        @include base.width();
+
+        height: $txtOtherHeight;
+        line-height: $txtOtherHeight;
+
+        @include base.font($size: 14px, $align: center);
+      }
+    }
+
+    .pic {
+      display: none;
+    }
+  }
+}

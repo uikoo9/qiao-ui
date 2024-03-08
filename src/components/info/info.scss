@@ -1,0 +1,79 @@
+@use '../../base';
+
+// info
+@mixin info($itemTitleHeight, $itemDescHeight, $itemOtherHeight, $fontWeight) {
+  .info {
+    @include base.width();
+
+    border-bottom: base.$borderDotted;
+
+    .item-title {
+      @include base.width();
+      @include base.alink();
+    }
+    .item-desc {
+      @include base.width();
+
+      line-height: $itemDescHeight;
+
+      @include base.font($color: #888);
+    }
+    .item-other {
+      @include base.width();
+
+      height: $itemOtherHeight;
+      line-height: $itemOtherHeight;
+
+      @include base.font();
+      @include base.alink();
+    }
+  }
+}
+
+.pc {
+  $itemTitleHeight: 60px;
+  $itemDescHeight: 40px;
+  $itemOtherHeight: 60px;
+
+  $fontWeight: 600;
+
+  @include info($itemTitleHeight, $itemDescHeight, $itemOtherHeight, $fontWeight);
+  .info {
+    .item-title {
+      height: $itemTitleHeight;
+      line-height: $itemTitleHeight;
+      font-weight: $fontWeight;
+
+      @include base.font($size: 20px);
+    }
+  }
+}
+
+.mobile {
+  $itemTitleHeight: 1.5rem;
+  $itemDescHeight: 1rem;
+  $itemOtherHeight: 1rem;
+
+  $fontWeight: 600;
+
+  @include info($itemTitleHeight, $itemDescHeight, $itemOtherHeight, $fontWeight);
+  .info {
+    width: calc(100% - 20px);
+    padding: 10px;
+
+    .item-title {
+      line-height: $itemTitleHeight;
+      font-weight: $fontWeight;
+
+      @include base.font($size: 16px);
+    }
+
+    .item-desc {
+      @include base.font($size: 12px, $color: #888);
+    }
+
+    .item-other {
+      @include base.font($size: 12px);
+    }
+  }
+}

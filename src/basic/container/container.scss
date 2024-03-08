@@ -1,0 +1,21 @@
+@use '../../base';
+
+// container
+@mixin container($width) {
+  .container {
+    width: $width;
+    margin: 0 auto;
+  }
+}
+
+.pc {
+  $width: 1400px;
+
+  @include container($width);
+}
+
+.mobile {
+  $width: 16rem;
+
+  @include container($width);
+}

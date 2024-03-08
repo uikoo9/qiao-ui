@@ -1,0 +1,16 @@
+@use '../../base';
+
+// info-container
+@mixin info-container() {
+  .info-container {
+    @include base.width();
+  }
+}
+
+.pc {
+  @include info-container();
+}
+
+.mobile {
+  @include info-container();
+}

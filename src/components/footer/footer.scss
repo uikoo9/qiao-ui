@@ -1,0 +1,25 @@
+@use '../../base';
+
+// footer
+@mixin footer($footerHeight) {
+  .footer {
+    @include base.width();
+
+    height: $footerHeight;
+    line-height: $footerHeight;
+
+    @include base.font($align: center);
+  }
+}
+
+.pc {
+  $footerHeight: 80px;
+
+  @include footer($footerHeight);
+}
+
+.mobile {
+  $footerHeight: 2rem;
+
+  @include footer($footerHeight);
+}
