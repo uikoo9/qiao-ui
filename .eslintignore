@@ -1,5 +1,8 @@
 # project
+
 node_modules
 package-lock.json
 
 # packages
+
+.nx
