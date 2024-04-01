@@ -32,10 +32,15 @@ export const Breadcrumbs = (props) => {
             {breadcrumb.name}
           </div>
 
-          {index + 1 == breadcrumbs.length ? null : <div style={{ width: props.width }}>/</div>}
+          {index + 1 == breadcrumbs.length ? null : <div className="split">/</div>}
         </div>
       );
     });
 
-  return <div className="breadcrumbs">{divs}</div>;
+  return (
+    <div className="breadcrumbs">
+      {divs}
+      <div className="clear"></div>
+    </div>
+  );
 };

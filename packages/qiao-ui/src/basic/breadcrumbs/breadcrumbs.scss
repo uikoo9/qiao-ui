@@ -1,22 +1,32 @@
 @use '../../base';
 
 // breadcrumbs
-@mixin breadcrumbs($height, $divWidth) {
+@mixin breadcrumbs($height) {
   .breadcrumbs {
     @include base.width();
     @include base.marginAuto();
 
-    height: $height;
+    height: auto;
     padding: 20px 0;
     border-bottom: base.$borderDotted;
 
+    .clear {
+      clear: both;
+    }
+
+    .split {
+      float: left;
+      width: 40px;
+      height: $height;
+    }
+
     .breadcrumb {
       float: left;
+      width: auto;
       height: $height;
 
       div {
         float: left;
-        width: $divWidth;
         height: $height;
         line-height: $height;
 
@@ -28,7 +38,7 @@
         @include base.cursor();
       }
       .item.active {
-        font-size: 20px;
+        font-weight: 600;
       }
     }
   }
@@ -36,14 +46,12 @@
 
 .pc {
   $height: 30px;
-  $divWidth: 80px;
 
-  @include breadcrumbs($height, $divWidth);
+  @include breadcrumbs($height);
 }
 
 .mobile {
   $height: 2rem;
-  $divWidth: 2.5rem;
 
-  @include breadcrumbs($height, $divWidth);
+  @include breadcrumbs($height);
 }
