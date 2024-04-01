@@ -18,6 +18,7 @@ export default {
         { text: 'Typescript', value: 'typescript' },
         { text: 'JSX', value: 'jsx' },
         { text: 'Java', value: 'java' },
+        { text: 'Python', value: 'python' },
         { text: 'SQL', value: 'sql' },
       ],
     },
