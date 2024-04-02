@@ -23,6 +23,7 @@ export const Info = (props) => {
       </div>
       {props.desc ? <div className="item-desc">{props.desc}</div> : null}
       {props.other ? <div className="item-other">{props.other}</div> : null}
+      <div className="clear"></div>
     </div>
   );
 };

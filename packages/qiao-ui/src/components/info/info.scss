@@ -1,52 +1,51 @@
 @use '../../base';
 
 // info
-@mixin info($itemTitleHeight, $itemDescHeight, $itemOtherHeight, $fontWeight) {
+@mixin info($itemTitleHeight, $itemDescHeight, $itemOtherHeight) {
   .info {
     @include base.width();
-
+    height: $itemTitleHeight;
+    padding: 15px 0;
     border-bottom: base.$borderDotted;
 
+    .clear {
+      clear: both;
+    }
+
+    > div {
+      float: left;
+      height: $itemTitleHeight;
+    }
+
     .item-title {
-      @include base.width();
       @include base.alink();
+      @include base.font($size: 16px);
+      line-height: $itemTitleHeight;
+      font-weight: 600;
     }
     .item-desc {
-      @include base.width();
-
+      padding-left: 20px;
+      height: $itemDescHeight;
       line-height: $itemDescHeight;
 
-      @include base.font($color: #888);
+      @include base.font($size: 14px, $color: #888);
     }
     .item-other {
-      @include base.width();
-
+      padding-left: 20px;
       height: $itemOtherHeight;
       line-height: $itemOtherHeight;
 
-      @include base.font();
-      @include base.alink();
+      @include base.font($size: 14px, $color: #888);
     }
   }
 }
 
 .pc {
-  $itemTitleHeight: 60px;
-  $itemDescHeight: 40px;
-  $itemOtherHeight: 60px;
+  $itemTitleHeight: 30px;
+  $itemDescHeight: 30px;
+  $itemOtherHeight: 30px;
 
-  $fontWeight: 600;
-
-  @include info($itemTitleHeight, $itemDescHeight, $itemOtherHeight, $fontWeight);
-  .info {
-    .item-title {
-      height: $itemTitleHeight;
-      line-height: $itemTitleHeight;
-      font-weight: $fontWeight;
-
-      @include base.font($size: 20px);
-    }
-  }
+  @include info($itemTitleHeight, $itemDescHeight, $itemOtherHeight);
 }
 
 .mobile {
@@ -54,19 +53,10 @@
   $itemDescHeight: 1rem;
   $itemOtherHeight: 1rem;
 
-  $fontWeight: 600;
-
-  @include info($itemTitleHeight, $itemDescHeight, $itemOtherHeight, $fontWeight);
+  @include info($itemTitleHeight, $itemDescHeight, $itemOtherHeight);
   .info {
     width: calc(100% - 20px);
     padding: 10px;
-
-    .item-title {
-      line-height: $itemTitleHeight;
-      font-weight: $fontWeight;
-
-      @include base.font($size: 16px);
-    }
 
     .item-desc {
       @include base.font($size: 12px, $color: #888);

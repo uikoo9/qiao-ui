@@ -4,6 +4,10 @@
 @mixin info-container() {
   .info-container {
     @include base.width();
+
+    .clear {
+      clear: both;
+    }
   }
 }
 

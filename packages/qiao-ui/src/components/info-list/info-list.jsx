@@ -26,5 +26,10 @@ export const InfoList = (props) => {
       );
     });
 
-  return <div className="info-container">{infoItems}</div>;
+  return (
+    <div className="info-container">
+      {infoItems}
+      <div className="clear"></div>
+    </div>
+  );
 };
