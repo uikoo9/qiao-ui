@@ -3,11 +3,11 @@
 // breadcrumbs
 @mixin breadcrumbs($height) {
   .breadcrumbs {
-    @include base.width();
     @include base.marginAuto();
 
+    width: calc(100% - 20px);
     height: auto;
-    padding: 20px 0;
+    padding: 20px 10px;
     border-bottom: base.$borderDashed;
 
     .clear {

@@ -3,9 +3,9 @@
 // header
 @mixin header($headerHeight, $logoWidth, $navsWidth, $navWidth) {
   .header {
-    @include base.width();
-
+    width: calc(100% - 20px);
     height: $headerHeight;
+    padding: 0 10px;
     border-bottom: base.$borderSolid;
 
     .logo {
@@ -52,7 +52,7 @@
 .pc {
   $headerHeight: 60px;
   $logoWidth: 200px;
-  $navsWidth: calc(100% - $logoWidth);
+  $navsWidth: calc(100% - $logoWidth - 20px);
   $navWidth: 100px;
 
   @include header($headerHeight, $logoWidth, $navsWidth, $navWidth);
@@ -61,7 +61,7 @@
 .mobile {
   $headerHeight: 2rem;
   $logoWidth: 6rem;
-  $navsWidth: calc(16rem - $logoWidth);
+  $navsWidth: calc(16rem - $logoWidth - 20px);
   $navWidth: calc($navsWidth / 4);
 
   @include header($headerHeight, $logoWidth, $navsWidth, $navWidth);

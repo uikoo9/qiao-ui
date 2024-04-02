@@ -1,11 +1,11 @@
 @use '../../base';
 
 // info
-@mixin info($itemTitleHeight, $itemDescHeight, $itemOtherHeight) {
+@mixin info($height) {
   .info {
-    @include base.width();
-    height: $itemTitleHeight;
-    padding: 15px 0;
+    width: calc(100% - 20px);
+    height: $height;
+    padding: 15px 10px;
     border-bottom: base.$borderDotted;
 
     .clear {
@@ -14,26 +14,26 @@
 
     > div {
       float: left;
-      height: $itemTitleHeight;
+      height: $height;
     }
 
     .item-title {
       @include base.alink();
       @include base.font($size: 16px);
-      line-height: $itemTitleHeight;
+      line-height: $height;
       font-weight: 600;
     }
     .item-desc {
       padding-left: 20px;
-      height: $itemDescHeight;
-      line-height: $itemDescHeight;
+      height: $height;
+      line-height: $height;
 
       @include base.font($size: 14px, $color: #888);
     }
     .item-other {
       padding-left: 20px;
-      height: $itemOtherHeight;
-      line-height: $itemOtherHeight;
+      height: $height;
+      line-height: $height;
 
       @include base.font($size: 14px, $color: #888);
     }
@@ -41,29 +41,19 @@
 }
 
 .pc {
-  $itemTitleHeight: 30px;
-  $itemDescHeight: 30px;
-  $itemOtherHeight: 30px;
+  $height: 30px;
 
-  @include info($itemTitleHeight, $itemDescHeight, $itemOtherHeight);
+  @include info($height);
 }
 
 .mobile {
-  $itemTitleHeight: 1.5rem;
-  $itemDescHeight: 1rem;
-  $itemOtherHeight: 1rem;
+  $height: 1.5rem;
 
-  @include info($itemTitleHeight, $itemDescHeight, $itemOtherHeight);
-  .info {
-    width: calc(100% - 20px);
-    padding: 10px;
-
-    .item-desc {
-      @include base.font($size: 12px, $color: #888);
-    }
-
-    .item-other {
-      @include base.font($size: 12px);
-    }
+  @include info($height);
+  .item-desc {
+    display: none;
+  }
+  .item-other {
+    display: none;
   }
 }
