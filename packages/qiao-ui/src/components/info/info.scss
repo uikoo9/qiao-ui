@@ -12,18 +12,15 @@
       clear: both;
     }
 
-    > div {
-      float: left;
-      height: $height;
-    }
-
     .item-title {
+      float: left;
+      line-height: $height;
+
       @include base.alink();
       @include base.font($size: 16px);
-      line-height: $height;
-      font-weight: 600;
     }
     .item-desc {
+      float: left;
       padding-left: 20px;
       height: $height;
       line-height: $height;
@@ -31,6 +28,7 @@
       @include base.font($size: 14px, $color: #888);
     }
     .item-other {
+      float: left;
       padding-left: 20px;
       height: $height;
       line-height: $height;
