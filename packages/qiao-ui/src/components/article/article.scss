@@ -6,7 +6,6 @@
     .article-title {
       @include base.width();
 
-      height: $titleHeight;
       line-height: $titleHeight;
       border-bottom: base.$borderDotted;
 
@@ -54,6 +53,7 @@
 
     .article-title {
       @include base.font($size: 28px, $align: center);
+      height: 100px;
     }
   }
 }
@@ -69,6 +69,7 @@
 
     .article-title {
       @include base.font($size: 24px, $align: center);
+      height: auto;
     }
 
     .article-date {
