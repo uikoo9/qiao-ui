@@ -50,9 +50,9 @@
 }
 
 .mobile {
-  $contentHeight: 6rem;
-  $txtMainHeight: 4rem;
-  $txtOtherHeight: 2rem;
+  $contentHeight: 10rem;
+  $txtMainHeight: 7rem;
+  $txtOtherHeight: 3rem;
 
   .content {
     @include base.width();

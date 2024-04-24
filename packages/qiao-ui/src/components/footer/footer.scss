@@ -19,7 +19,7 @@
 }
 
 .mobile {
-  $footerHeight: 2rem;
+  $footerHeight: 3rem;
 
   @include footer($footerHeight);
 }
