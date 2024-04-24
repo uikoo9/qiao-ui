@@ -13,7 +13,7 @@
 }
 
 .pc {
-  $footerHeight: 80px;
+  $footerHeight: 70px;
 
   @include footer($footerHeight);
 }
