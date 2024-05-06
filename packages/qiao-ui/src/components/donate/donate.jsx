@@ -17,7 +17,7 @@ export const Donate = (props) => {
     props.type == 'qq' ? (
       <img src="https://static.insistime.com/00_insistime/qq.jpeg" alt="qq" />
     ) : (
-      <img src="https://static.insistime.com/00_insistime/donate.png" alt="donate" />
+      <img src="https://static.insistime.com/00_insistime/donate2.png" alt="donate" />
     );
   return (
     <div className="donate">
