@@ -2,10 +2,12 @@
 
 // button
 @mixin button() {
-  $btnPadding: 8px;
   $icon: 18px;
-  $iconMarginTop: 11px;
-  $iconMarginRight: 9px;
+  $btnPadding: 8px;
+  $iconMarginTop1: 11px;
+  $iconMarginLeft1: 9px;
+  $iconMarginTop2: 12px;
+  $iconMarginLeft2: 6px;
 
   .btn {
     width: calc(100% - 2 * $btnPadding);
@@ -23,11 +25,20 @@
   .btn.bg1 {
     background: base.$btn_bg1;
   }
+  .btn.bg2 {
+    background: base.$btn_bg2;
+  }
+  .btn.border1 {
+    border: 1px solid base.$btn_color2;
+  }
   .btn.radius1 {
     border-radius: base.$btn_radius1;
   }
   .btn.color1 {
     color: base.$btn_color1;
+  }
+  .btn.color2 {
+    color: base.$btn_color2;
   }
   .btn.size16 {
     font-size: base.$btn_size16;
@@ -46,7 +57,6 @@
       float: left;
       width: $icon;
       height: $icon;
-      margin: $iconMarginTop $iconMarginRight;
 
       img {
         display: block;
@@ -56,7 +66,24 @@
     }
     .ctx {
       float: left;
-      width: calc(100% - $icon - (2 * $iconMarginRight));
+    }
+  }
+  .btn.icon1 {
+    .icon {
+      margin: 0 $iconMarginLeft1;
+      margin-top: $iconMarginTop1;
+    }
+    .ctx {
+      width: calc(100% - $icon - (2 * $iconMarginLeft1));
+    }
+  }
+  .btn.icon2 {
+    .icon {
+      margin: 0 $iconMarginLeft2;
+      margin-top: $iconMarginTop2;
+    }
+    .ctx {
+      width: calc(100% - $icon - (2 * $iconMarginLeft2));
     }
   }
 }
