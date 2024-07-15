@@ -1,0 +1,57 @@
+@use '../base.scss';
+
+// button
+@mixin button() {
+  $btnPadding: 8px;
+  $icon: 18px;
+  $iconMarginTop: 11px;
+  $iconMarginRight: 9px;
+
+  .btn {
+    width: calc(100% - 2 * $btnPadding);
+    height: 100%;
+    padding: 0 $btnPadding;
+    line-height: inherit;
+    @include base.cursor();
+
+    .ctx {
+      width: 100%;
+      height: 100%;
+      line-height: inherit;
+    }
+  }
+  .btn.bg1 {
+    background: base.$btn_bg1;
+  }
+  .btn.radius1 {
+    border-radius: base.$btn_radius1;
+  }
+  .btn.color1 {
+    color: base.$btn_color1;
+  }
+  .btn.size16 {
+    font-size: base.$btn_size16;
+  }
+  .btn.icon {
+    .icon {
+      float: left;
+      width: $icon;
+      height: $icon;
+      margin: $iconMarginTop $iconMarginRight;
+
+      img {
+        display: block;
+        width: $icon;
+        height: $icon;
+      }
+    }
+    .ctx {
+      float: left;
+      width: calc(100% - $icon - (2 * $iconMarginRight));
+    }
+  }
+}
+
+.dark {
+  @include button();
+}

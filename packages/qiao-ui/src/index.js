@@ -1,4 +1,9 @@
 /**
+ * q
+ */
+export { QButton } from './q/button/button.jsx';
+
+/**
  * basic
  */
 export { Alert } from './basic/alert/alert.jsx';

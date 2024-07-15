@@ -2,6 +2,12 @@ $borderSolid: solid 1px #333;
 $borderDashed: dashed 1px #333;
 $borderDotted: dotted 1px #333;
 
+// btn
+$btn_bg1: linear-gradient(65deg, #8ad4a8, #20cac0, #b2a3ea);
+$btn_radius1: 5px;
+$btn_color1: #22242b;
+$btn_size16: 16px;
+
 // width
 // @include base.width();
 @mixin width() {
