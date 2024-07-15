@@ -32,6 +32,15 @@
   .btn.size16 {
     font-size: base.$btn_size16;
   }
+  .btn.txtAlignCenter {
+    text-align: center;
+  }
+  .btn.txtAlignLeft {
+    text-align: left;
+  }
+  .btn.txtAlignRight {
+    text-align: right;
+  }
   .btn.icon {
     .icon {
       float: left;
