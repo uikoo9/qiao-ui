@@ -22,3 +22,10 @@ $color15: rgba(
   $color: #aaadb7,
   $alpha: 0.5,
 ); // bg4
+
+@mixin lcolor01() {
+  color: transparent;
+  background-clip: text;
+  background-image: $color01;
+  -webkit-text-fill-color: transparent;
+}
