@@ -1,4 +1,5 @@
 @use '../../base.scss';
+@use '../color.scss';
 
 // button
 @mixin button() {
@@ -23,28 +24,28 @@
     }
   }
   .btn.bg1 {
-    background: base.$btn_color1;
+    background: color.$color01;
   }
   .btn.bg2 {
-    background: base.$btn_color2;
+    background: color.$color02;
   }
   .btn.bg4 {
-    background: base.$btn_color4;
+    background: color.$color04;
   }
   .btn.hover2:hover {
-    background: base.$btn_color5;
+    background: color.$color05;
   }
   .btn.border1 {
-    border: 1px solid base.$btn_color4;
+    border: 1px solid color.$color04;
   }
   .btn.radius1 {
     border-radius: base.$btn_radius1;
   }
   .btn.color1 {
-    color: base.$btn_color3;
+    color: color.$color03;
   }
   .btn.color2 {
-    color: base.$btn_color4;
+    color: color.$color04;
   }
   .btn.size16 {
     font-size: base.$btn_size16;
