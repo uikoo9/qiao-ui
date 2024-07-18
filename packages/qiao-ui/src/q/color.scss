@@ -24,8 +24,10 @@ $color15: rgba(
 ); // bg4
 
 @mixin lcolor01() {
-  color: transparent;
-  background-clip: text;
-  background-image: $color01;
-  -webkit-text-fill-color: transparent;
+  & {
+    color: transparent;
+    background-clip: text;
+    background-image: $color01;
+    -webkit-text-fill-color: transparent;
+  }
 }

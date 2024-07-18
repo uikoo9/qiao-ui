@@ -4,37 +4,35 @@
 @mixin article($titleHeight, $contentHeight) {
   .article-container {
     .article-title {
-      @include base.width();
-
       line-height: $titleHeight;
       border-bottom: base.$borderDotted;
-
-      @include base.font($size: 28px, $align: center);
       font-weight: 600;
+
+      @include base.width();
+      @include base.font($size: 28px, $align: center);
     }
 
     .article-date {
-      @include base.width();
       height: $contentHeight;
       line-height: $contentHeight;
 
+      @include base.width();
       @include base.font();
     }
 
     .article-times {
-      @include base.width();
-
       height: $contentHeight;
       line-height: $contentHeight;
       border-bottom: base.$borderDotted;
 
+      @include base.width();
       @include base.font();
     }
 
     .article-content {
-      @include base.width();
       padding-bottom: $contentHeight;
       border-bottom: base.$borderDotted;
+      @include base.width();
 
       img {
         max-width: 100%;
@@ -52,8 +50,8 @@
     @include base.width();
 
     .article-title {
-      @include base.font($size: 28px, $align: center);
       height: 100px;
+      @include base.font($size: 28px, $align: center);
     }
   }
 }
@@ -68,8 +66,8 @@
     padding: 0 10px;
 
     .article-title {
-      @include base.font($size: 24px, $align: center);
       height: auto;
+      @include base.font($size: 24px, $align: center);
     }
 
     .article-date {

@@ -3,11 +3,11 @@
 $inputHeight: 50px;
 
 .input {
-  @include base.width();
-
   height: $inputHeight;
   border-bottom: base.$borderSolid;
   margin-bottom: 10px;
+
+  @include base.width();
 
   input {
     width: calc(100% - 20px);

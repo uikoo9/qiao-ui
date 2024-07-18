@@ -3,11 +3,10 @@
 // footer
 @mixin footer($footerHeight) {
   .footer {
-    @include base.width();
-
     height: $footerHeight;
     line-height: $footerHeight;
 
+    @include base.width();
     @include base.font($align: center);
   }
 }

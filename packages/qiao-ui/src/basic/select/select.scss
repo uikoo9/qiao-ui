@@ -3,8 +3,6 @@
 $selectHeight: 50px;
 
 .select {
-  @include base.width();
-
   height: $selectHeight;
   line-height: $selectHeight;
 
@@ -14,5 +12,6 @@ $selectHeight: 50px;
 
   border-bottom: base.$borderSolid;
 
+  @include base.width();
   @include base.font($size: 18px);
 }

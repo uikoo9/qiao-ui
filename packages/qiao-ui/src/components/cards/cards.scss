@@ -11,19 +11,17 @@
       height: calc($cardHeight / 2);
 
       .title {
-        @include base.width();
-
         height: $titleHeight;
         line-height: $titleHeight;
 
+        @include base.width();
         @include base.font($size: 18px, $align: center);
       }
       .desc {
-        @include base.width();
-
         height: $descHeight;
         line-height: $descHeight;
 
+        @include base.width();
         @include base.font($align: center);
       }
     }
@@ -34,9 +32,10 @@
   $cardHeight: 300px;
   $titleHeight: 80px;
   $descHeight: 20px;
+  $cardPadding: 40px;
+
   @include cards($cardHeight, $titleHeight, $descHeight);
 
-  $cardPadding: 40px;
   .cards {
     height: $cardHeight;
     padding-top: $cardPadding;
@@ -49,14 +48,16 @@
   $cardHeight: 6rem;
   $titleHeight: 2rem;
   $descHeight: 3rem;
+  $titlePaddingTop: 1rem;
+
   @include cards($cardHeight, $titleHeight, $descHeight);
 
-  $titlePaddingTop: 1rem;
   .cards {
     .card {
-      @include base.width();
       height: $cardHeight;
       border-bottom: base.$borderDotted;
+
+      @include base.width();
 
       .title {
         padding-top: $titlePaddingTop;
