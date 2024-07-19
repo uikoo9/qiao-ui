@@ -17,6 +17,7 @@ export const Grid = (props) => {
   const [cks, setCks] = useState([]);
   const [cols, setCols] = useState(null);
   const [rows, setRows] = useState(null);
+  const [total, setTotal] = useState(null);
   const [sumpage, setSumpage] = useState(null);
   const [pagenumber, setPagenumber] = useState(null);
 
@@ -37,6 +38,7 @@ export const Grid = (props) => {
     const res = await props.init(data, pagenumber);
     setCols(res.cols);
     setRows(res.rows);
+    setTotal(res.total);
     setSumpage(res.sumpage);
     setPagenumber(res.pagenumber);
   };
@@ -83,6 +85,7 @@ export const Grid = (props) => {
         searchModal={searchModalRef}
         delRows={delRow}
         reload={reload}
+        total={total}
         sumpage={sumpage}
         pagenumber={pagenumber}
       />

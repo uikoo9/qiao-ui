@@ -119,6 +119,8 @@ export const Toolbar = (props) => {
       >
         100
       </div>
+      <div>/</div>
+      <div>{props.total}</div>
     </div>
   );
 };
