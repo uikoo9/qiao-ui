@@ -39,6 +39,7 @@ export const gridInit = async (listFunc, data, pagenumber, cols) => {
 
   return {
     rows: rows,
+    total: res.obj.total,
     sumpage: res.obj.sumpage,
     pagenumber: res.obj.pagenumber,
   };
