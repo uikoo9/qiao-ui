@@ -1,33 +1,42 @@
-$color01: linear-gradient(65deg, #8ad4a8, #20cac0, #b2a3ea);
-$color02: rgba(62, 67, 81, 0);
-$color03: #22242b; // color1
-$color04: #20cac0; // fontColor2
-$color05: #3e4351; // color3
-$color06: #0b0f19; // color0
-$color07: #aaadb7; // color2
-$color08: #9ca2ae; // color4
-$color09: #292d38; // color5
-$color10: #363b48; // color6
-$color11: #d4dbe2; // fontColor1
-$color12: #ff7c5f; // fontColor3
-$color13: rgba(
+$color01: #11131b;
+$color03: #22242b;
+$color04: #20cac0;
+$color05: #3e4351;
+$color06: #0b0f19;
+$color07: #aaadb7;
+$color08: #9ca2ae;
+$color09: #292d38;
+$color10: #363b48;
+$color11: #d4dbe2;
+$color12: #ff7c5f;
+
+// rgba color
+$acolor01: rgba(
   $color: #22242b,
   $alpha: 0.2,
-); // bg2
-$color14: rgba(
+);
+$acolor02: rgba(
   $color: #1e2028,
   $alpha: 0.41,
-); // bg3
-$color15: rgba(
+);
+$acolor03: rgba(
   $color: #aaadb7,
   $alpha: 0.5,
-); // bg4
+);
+$acolor04: rgba(
+  $color: #3e4351,
+  $alpha: 0,
+);
 
-@mixin lcolor01() {
+// linear color
+$lcolor01: linear-gradient(65deg, #8ad4a8, #20cac0, #b2a3ea);
+
+// linear font color
+@mixin lcolor($color) {
   & {
     color: transparent;
     background-clip: text;
-    background-image: $color01;
+    background-image: $color;
     -webkit-text-fill-color: transparent;
   }
 }
