@@ -124,3 +124,40 @@ color集合
   }
 }
 ```
+
+### QModal
+
+遮罩
+
+```scss
+$modalTop: 206px;
+$modalWidth: 680px;
+$modalRadius: 8px;
+$modalBg: color.$acolor01;
+$modalContentBg: color.$color05;
+$modalCloseTopRight: 15px;
+$modalCloseWidthHeight: 24px;
+$modalCloseBg: url('@styles/assets/icons/ic-close.svg');
+$modalCloseHoverBg: url('@styles/assets/icons/ic-close-hover.svg');
+.QModal {
+  background-color: $modalBg;
+
+  .modal {
+    top: $modalTop;
+    width: $modalWidth;
+    border-radius: $modalRadius;
+    background-color: $modalContentBg;
+  }
+
+  .modal-close {
+    top: $modalCloseTopRight;
+    right: $modalCloseTopRight;
+    width: $modalCloseWidthHeight;
+    height: $modalCloseWidthHeight;
+    background-image: $modalCloseBg;
+  }
+  .modal-close:hover {
+    background-image: $modalCloseHoverBg;
+  }
+}
+```

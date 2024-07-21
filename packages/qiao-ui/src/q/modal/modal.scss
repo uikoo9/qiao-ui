@@ -2,7 +2,7 @@
 
 // modal
 @mixin modal() {
-  .modal-container {
+  .QModal {
     z-index: 97;
     position: fixed;
     top: 0;
