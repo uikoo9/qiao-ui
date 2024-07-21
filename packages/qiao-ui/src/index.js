@@ -2,6 +2,7 @@
  * q
  */
 export { QButton } from './q/button/button.jsx';
+export { QModal } from './q/modal/modal.jsx';
 
 /**
  * basic
