@@ -8,14 +8,23 @@ import './button.scss';
  * q button
  */
 export const QButton = (props) => {
-  return (
+  // btn
+  const divOnlyBtn = (
     <div className="QButton" onClick={props.onClick}>
-      {props.icon ? (
-        <div className="icon">
-          <img src={props.icon} alt="button icon" />
-        </div>
-      ) : null}
       <div className="ctx">{props.text}</div>
     </div>
   );
+
+  // icon
+  const divHasIcon = (
+    <div className="QButton" onClick={props.onClick}>
+      <div className="icon">
+        <img src={props.icon} alt="button icon" />
+      </div>
+      <div className="icon-ctx">{props.text}</div>
+    </div>
+  );
+
+  // r
+  return props.icon ? divHasIcon : divOnlyBtn;
 };

@@ -1,65 +1,20 @@
 @use '../../base.scss';
-@use '../color.scss';
 
 // button
 @mixin button() {
   $icon: 18px;
-  $btnPadding: 8px;
-  $iconMarginTop1: 11px;
-  $iconMarginLeft1: 9px;
-  $iconMarginTop2: 12px;
-  $iconMarginLeft2: 6px;
 
   .QButton {
-    width: calc(100% - 2 * $btnPadding);
+    width: 100%;
     height: 100%;
-    padding: 0 $btnPadding;
     line-height: inherit;
     @include base.cursor();
 
     .ctx {
       width: 100%;
       height: 100%;
-      line-height: inherit;
     }
-  }
-  .QButton.bg1 {
-    background: color.$color01;
-  }
-  .QButton.bg2 {
-    background: color.$acolor04;
-  }
-  .QButton.bg4 {
-    background: color.$color04;
-  }
-  .QButton.hover2:hover {
-    background: color.$color05;
-  }
-  .QButton.border1 {
-    border: 1px solid color.$color04;
-  }
-  .QButton.radius1 {
-    border-radius: base.$btn_radius1;
-  }
-  .QButton.color1 {
-    color: color.$color03;
-  }
-  .QButton.color2 {
-    color: color.$color04;
-  }
-  .QButton.size16 {
-    font-size: base.$btn_size16;
-  }
-  .QButton.txtAlignCenter {
-    text-align: center;
-  }
-  .QButton.txtAlignLeft {
-    text-align: left;
-  }
-  .QButton.txtAlignRight {
-    text-align: right;
-  }
-  .QButton.icon {
+
     .icon {
       float: left;
       width: $icon;
@@ -71,26 +26,11 @@
         height: $icon;
       }
     }
-    .ctx {
+    .icon-ctx {
       float: left;
-    }
-  }
-  .QButton.icon1 {
-    .icon {
-      margin: 0 $iconMarginLeft1;
-      margin-top: $iconMarginTop1;
-    }
-    .ctx {
-      width: calc(100% - $icon - (2 * $iconMarginLeft1));
-    }
-  }
-  .QButton.icon2 {
-    .icon {
-      margin: 0 $iconMarginLeft2;
-      margin-top: $iconMarginTop2;
-    }
-    .ctx {
-      width: calc(100% - $icon - (2 * $iconMarginLeft2));
+      width: calc(100% - $icon);
+      height: 100%;
+      line-height: inherit;
     }
   }
 }
