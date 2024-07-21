@@ -9,7 +9,7 @@ import './button.scss';
  */
 export const QButton = (props) => {
   return (
-    <div className={props.className} onClick={props.onClick}>
+    <div className="QButton" onClick={props.onClick}>
       {props.icon ? (
         <div className="icon">
           <img src={props.icon} alt="button icon" />

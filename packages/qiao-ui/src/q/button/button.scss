@@ -10,7 +10,7 @@
   $iconMarginTop2: 12px;
   $iconMarginLeft2: 6px;
 
-  .btn {
+  .QButton {
     width: calc(100% - 2 * $btnPadding);
     height: 100%;
     padding: 0 $btnPadding;
@@ -23,43 +23,43 @@
       line-height: inherit;
     }
   }
-  .btn.bg1 {
+  .QButton.bg1 {
     background: color.$color01;
   }
-  .btn.bg2 {
+  .QButton.bg2 {
     background: color.$acolor04;
   }
-  .btn.bg4 {
+  .QButton.bg4 {
     background: color.$color04;
   }
-  .btn.hover2:hover {
+  .QButton.hover2:hover {
     background: color.$color05;
   }
-  .btn.border1 {
+  .QButton.border1 {
     border: 1px solid color.$color04;
   }
-  .btn.radius1 {
+  .QButton.radius1 {
     border-radius: base.$btn_radius1;
   }
-  .btn.color1 {
+  .QButton.color1 {
     color: color.$color03;
   }
-  .btn.color2 {
+  .QButton.color2 {
     color: color.$color04;
   }
-  .btn.size16 {
+  .QButton.size16 {
     font-size: base.$btn_size16;
   }
-  .btn.txtAlignCenter {
+  .QButton.txtAlignCenter {
     text-align: center;
   }
-  .btn.txtAlignLeft {
+  .QButton.txtAlignLeft {
     text-align: left;
   }
-  .btn.txtAlignRight {
+  .QButton.txtAlignRight {
     text-align: right;
   }
-  .btn.icon {
+  .QButton.icon {
     .icon {
       float: left;
       width: $icon;
@@ -75,7 +75,7 @@
       float: left;
     }
   }
-  .btn.icon1 {
+  .QButton.icon1 {
     .icon {
       margin: 0 $iconMarginLeft1;
       margin-top: $iconMarginTop1;
@@ -84,7 +84,7 @@
       width: calc(100% - $icon - (2 * $iconMarginLeft1));
     }
   }
-  .btn.icon2 {
+  .QButton.icon2 {
     .icon {
       margin: 0 $iconMarginLeft2;
       margin-top: $iconMarginTop2;
