@@ -2,12 +2,9 @@
 
 // button
 @mixin button() {
-  $icon: 18px;
-
   .QButton {
     width: 100%;
     height: 100%;
-    line-height: inherit;
     @include base.cursor();
 
     .ctx {
@@ -17,20 +14,13 @@
 
     .icon {
       float: left;
-      width: $icon;
-      height: $icon;
 
       img {
         display: block;
-        width: $icon;
-        height: $icon;
       }
     }
     .icon-ctx {
       float: left;
-      width: calc(100% - $icon);
-      height: 100%;
-      line-height: inherit;
     }
   }
 }
