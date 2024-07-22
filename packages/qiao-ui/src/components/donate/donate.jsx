@@ -19,6 +19,7 @@ export const Donate = (props) => {
     img = <img src="https://static-insistime.vincentqiao.com/00_insistime/donate2.png" alt="donate" />;
   if (props.type == 'electron')
     img = <img src="https://static.vincentqiao.com/qrcode/wechat-electron.jpg" alt="electron" />;
+  if (props.type == 'sd') img = <img src="https://static.vincentqiao.com/qrcode/wechat-sd.jpg" alt="sd" />;
   return (
     <div className="donate">
       <div className="donate-img">{img}</div>
