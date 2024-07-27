@@ -161,3 +161,29 @@ $modalCloseHoverBg: url('@styles/assets/icons/ic-close-hover.svg');
   }
 }
 ```
+
+### QRadio
+
+横向单选
+
+```scss
+$radioInputWidthHeight: 13px;
+$radioInputMargin: 13px;
+$radioLabelPadding: 10px;
+$radioLabelColor: color.$color11;
+$radioLabelFontSize: 16px;
+$radioLabelLineHeight: $ckHeight;
+> .QRadio {
+  input {
+    width: $radioInputWidthHeight;
+    height: $radioInputWidthHeight;
+    margin: $radioInputMargin 0;
+  }
+  span {
+    padding: 0 $radioLabelPadding;
+    color: $radioLabelColor;
+    font-size: $radioLabelFontSize;
+    line-height: $radioLabelLineHeight;
+  }
+}
+```

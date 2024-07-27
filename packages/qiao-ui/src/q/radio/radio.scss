@@ -1,0 +1,29 @@
+@use '../../base.scss';
+
+// QRadio
+@mixin QRadio() {
+  .QRadio {
+    width: 100%;
+    height: 100%;
+
+    label {
+      float: left;
+      display: block;
+      width: auto;
+      height: 100%;
+      @include base.cursor();
+    }
+    input {
+      display: inline-block;
+    }
+    span {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+.dark {
+  @include QRadio();
+}

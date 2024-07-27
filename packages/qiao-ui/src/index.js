@@ -3,6 +3,7 @@
  */
 export { QButton } from './q/button/button.jsx';
 export { QModal } from './q/modal/modal.jsx';
+export { QRadio } from './q/radio/radio.jsx';
 
 /**
  * basic
