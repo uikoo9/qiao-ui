@@ -47,6 +47,40 @@ color集合
 
 ## components
 
+### QInput
+
+输入框
+
+```scss
+$inputHeight: 40px;
+$inputMarginBottom: 10px;
+$inputPadding: 10px;
+$inputWidth: calc(100% - (2 * $inputPadding));
+$inputColor: color.$color11;
+$inputSize: 14px;
+$inputAlign: left;
+$inputPlaceholderColor: color.$acolor03;
+
+.QInput {
+  height: $inputHeight;
+  margin-bottom: $inputMarginBottom;
+
+  input {
+    width: $inputWidth;
+    height: $inputHeight;
+    padding: 0 $inputPadding;
+
+    color: $inputColor;
+    font-size: $inputSize;
+    text-align: $inputAlign;
+    line-height: $inputHeight;
+  }
+  input::placeholder {
+    color: $inputPlaceholderColor;
+  }
+}
+```
+
 ### QButton
 
 按钮
