@@ -1,0 +1,22 @@
+// QInput
+@mixin QInput() {
+  .QInput {
+    width: 100%;
+
+    input {
+      background-color: transparent;
+
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+}
+
+.dark {
+  @include QInput();
+}

@@ -5,7 +5,7 @@ import React from 'react';
 import './modal.scss';
 
 /**
- * q modal
+ * QModal
  */
 export const QModal = (props) => {
   const modal = (

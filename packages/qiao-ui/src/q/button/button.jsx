@@ -5,7 +5,7 @@ import React from 'react';
 import './button.scss';
 
 /**
- * q button
+ * QButton
  */
 export const QButton = (props) => {
   // btn

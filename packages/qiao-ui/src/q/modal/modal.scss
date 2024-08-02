@@ -1,7 +1,7 @@
 @use '../../base.scss';
 
-// modal
-@mixin modal() {
+// QModal
+@mixin QModal() {
   .QModal {
     z-index: 97;
     position: fixed;
@@ -31,5 +31,5 @@
 }
 
 .dark {
-  @include modal();
+  @include QModal();
 }
