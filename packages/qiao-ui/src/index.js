@@ -36,9 +36,6 @@ export { Poweredby } from './components/poweredby/poweredby.jsx';
 // donate
 export { Donate } from './components/donate/donate.jsx';
 
-// login
-export { LoginBox } from './components/login-box/login-box.jsx';
-
 // manage
 export { Menus } from './components/menus/menus.jsx';
 export { Toolbar } from './components/toolbar/toolbar.jsx';
