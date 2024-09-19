@@ -44,7 +44,7 @@
         }
 
         .login-mobile {
-          width: 280px;
+          width: calc(280px - 10px);
           height: 40px;
           margin-top: 20px;
           padding-left: 10px;
@@ -61,7 +61,7 @@
           }
           .login-mobile-r {
             float: left;
-            width: calc(100% - 66px);
+            width: calc(100% - 66px - 10px);
             height: 40px;
           }
         }
