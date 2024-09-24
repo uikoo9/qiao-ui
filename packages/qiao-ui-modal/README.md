@@ -25,9 +25,16 @@ const { QModal } = require('qiao-ui-modal');
 import { QModal } from 'qiao-ui-modal';
 ```
 
-## scss
+## QModal
 
-样式
+```jsx
+<QModal
+  show={helpModalShow}
+  closeModal={() => {
+    setHelpModalShow(false);
+  }}
+></QModal>
+```
 
 ```scss
 $modalTop: 206px;
@@ -46,4 +53,19 @@ $modalCloseTopRight: 15px;
     right: $modalCloseTopRight;
   }
 }
+```
+
+## QConfirm
+
+```jsx
+<QConfirm
+  show={true}
+  title="请选择图片！"
+  desc="请选择图片！"
+  btnCancel="取消"
+  btnOK="好的"
+  onCancel={() => {}}
+  onOK={() => {}}
+  onClose={() => {}}
+/>
 ```

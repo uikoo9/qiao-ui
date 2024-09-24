@@ -1,0 +1,87 @@
+@mixin qmodal() {
+  .QModal {
+    .modal {
+      top: 100px;
+      width: 440px;
+      background-color: #292d38;
+    }
+
+    .modal-close {
+      top: 18px;
+      right: 18px;
+    }
+  }
+}
+
+.QConfirm {
+  @include qmodal();
+
+  $width: 440px;
+  $height: 230px;
+  $paddingH: 34px;
+  $paddingW: 55px;
+  $titleHeight: 30px;
+  $btnWidth: 155px;
+  $btnHeight: 40px;
+  .QConfirm-content {
+    width: calc($width - $paddingW - $paddingW);
+    // height: calc($height - $paddingH - $paddingH);
+    padding: $paddingH $paddingW;
+
+    .txts {
+      width: 100%;
+      height: calc(100% - $btnHeight);
+      padding-bottom: 20px;
+      color: #fff;
+
+      .title {
+        width: 100%;
+        height: $titleHeight;
+        font-size: 20px;
+        line-height: 30px;
+      }
+      .desc {
+        width: 100%;
+        height: calc(100% - $titleHeight);
+        font-size: 16px;
+        line-height: 23px;
+      }
+    }
+
+    .btns {
+      width: 100%;
+      height: $btnHeight;
+
+      .btn.l {
+        margin-left: 20px;
+        .QButton {
+          background-color: #20cac0;
+
+          .ctx {
+            color: #292d38;
+          }
+        }
+      }
+      .btn {
+        float: left;
+        width: 155px;
+
+        .QButton {
+          width: $btnWidth;
+          height: $btnHeight;
+          border-radius: 5px;
+          background-color: rgba($color: #aaadb7, $alpha: 0.4);
+
+          .ctx {
+            width: 100%;
+            height: 100%;
+            color: #d4dbe2;
+            font-size: 16px;
+            line-height: $btnHeight;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

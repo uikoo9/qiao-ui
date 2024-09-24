@@ -30,10 +30,10 @@
       user-select: none;
       cursor: pointer;
 
-      background-image: url('./assets/ic-close.svg');
+      background-image: url('../assets/ic-close.svg');
     }
     .modal-close:hover {
-      background-image: url('./assets/ic-close-hover.svg');
+      background-image: url('../assets/ic-close-hover.svg');
     }
   }
 }
