@@ -25,7 +25,6 @@
   $btnHeight: 40px;
   .QConfirm-content {
     width: calc($width - $paddingW - $paddingW);
-    // height: calc($height - $paddingH - $paddingH);
     padding: $paddingH $paddingW;
 
     .txts {
@@ -38,7 +37,7 @@
         width: 100%;
         height: $titleHeight;
         font-size: 20px;
-        line-height: 30px;
+        line-height: $titleHeight;
       }
       .desc {
         width: 100%;

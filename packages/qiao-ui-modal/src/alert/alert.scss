@@ -19,7 +19,7 @@
   $width: 400px;
   $paddingH: 34px;
   $paddingW: 55px;
-  $titleHeight: 30px;
+  $titleHeight: 40px;
   $btnWidth: 155px;
   $btnHeight: 40px;
   .QAlert-content {
@@ -29,14 +29,14 @@
     .txts {
       width: 100%;
       height: calc(100% - $btnHeight);
-      padding-bottom: 20px;
+      padding-bottom: 30px;
       color: #fff;
 
       .title {
         width: 100%;
         height: $titleHeight;
         font-size: 20px;
-        line-height: 30px;
+        line-height: $titleHeight;
         text-align: center;
       }
     }
