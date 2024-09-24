@@ -1,5 +1,3 @@
-@use '../../base.scss';
-
 // QModal
 @mixin QModal() {
   .QModal {
@@ -10,22 +8,32 @@
     width: 100%;
     height: 100%;
     backdrop-filter: blur(3px);
+    background-color: rgba($color: #22242b, $alpha: 0.2);
 
     .modal {
       z-index: 98;
       position: relative;
       margin: 0 auto;
+      border-radius: 8px;
     }
 
     .modal-close {
       z-index: 99;
       position: absolute;
+      width: 24px;
+      height: 24px;
 
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
 
-      @include base.cursor();
+      user-select: none;
+      cursor: pointer;
+
+      background-image: url('./assets/ic-close.svg');
+    }
+    .modal-close:hover {
+      background-image: url('./assets/ic-close-hover.svg');
     }
   }
 }
