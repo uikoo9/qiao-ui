@@ -5,7 +5,8 @@ import React, { useState } from 'react';
 import './login-mobile-code.scss';
 
 // components
-import { QButton, QInput } from 'qiao-ui';
+import { QInput } from 'qiao-ui';
+import { QButton } from 'qiao-ui-button';
 
 /**
  * LoginMobileCode

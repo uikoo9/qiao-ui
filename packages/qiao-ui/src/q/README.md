@@ -23,10 +23,10 @@ npm i qiao-ui
 
 ```javascript
 // cjs
-const { QButton } = require('qiao-ui');
+const { QInput } = require('qiao-ui');
 
 // mjs
-import { QButton } from 'qiao-ui';
+import { QInput } from 'qiao-ui';
 ```
 
 ## color
