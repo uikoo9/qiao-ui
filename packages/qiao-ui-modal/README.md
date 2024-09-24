@@ -55,7 +55,17 @@ $modalCloseTopRight: 15px;
 }
 ```
 
+## QAlert
+
+提示框
+
+```jsx
+<QAlert show={true} title="请选择图片！" btnOK="好的" onOK={() => {}} onClose={() => {}} />
+```
+
 ## QConfirm
+
+确认框
 
 ```jsx
 <QConfirm
