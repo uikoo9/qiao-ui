@@ -1,6 +1,6 @@
 {
   "name": "qiao-ui-login",
-  "version": "4.1.7",
+  "version": "4.1.8",
   "description": "qiao ui login",
   "keywords": [
     "qiao",
@@ -31,7 +31,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "qiao-ui": "^4.1.7",
+    "qiao-ui": "^4.1.8",
     "qiao-ui-button": "^4.1.6",
     "qiao.log.js": "^3.7.1"
   }
