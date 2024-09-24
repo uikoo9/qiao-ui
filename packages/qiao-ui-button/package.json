@@ -1,0 +1,33 @@
+{
+  "name": "qiao-ui-button",
+  "version": "4.1.5",
+  "description": "qiao ui button",
+  "keywords": [
+    "qiao",
+    "ui",
+    "button"
+  ],
+  "author": "uikoo9 <uikoo9@qq.com>",
+  "homepage": "https://qiao-ui.vincentqiao.com/#/",
+  "license": "MIT",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "sideEffects": [
+    "**/*.scss"
+  ],
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uikoo9/qiao-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uikoo9/qiao-ui/issues"
+  },
+  "scripts": {},
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
