@@ -188,4 +188,12 @@
   $height: 400px;
   $imgWidth: 299px;
   @include login($width, $height, $imgWidth);
+
+  // < 768
+  @media (max-width: 767.98px) {
+    $width: 381px;
+    $height: 400px;
+    $imgWidth: 0px;
+    @include login($width, $height, $imgWidth);
+  }
 }
