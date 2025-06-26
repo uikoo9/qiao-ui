@@ -26,9 +26,9 @@
   },
   "scripts": {},
   "peerDependencies": {
-    "@wangeditor/editor": "^5.1.14",
-    "@wangeditor/editor-for-react": "^1.0.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-react": "^1.0.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }
