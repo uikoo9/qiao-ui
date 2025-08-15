@@ -19,11 +19,13 @@ export const Header = (props) => {
   const navs =
     props.navs &&
     props.navs.map((nav, index) => {
-      if (!nav.url || !nav.name) return;
+      const linkDiv = <Link blank={nav.blank} url={nav.url} txt={nav.name} />;
+      const clickDiv = <div onClick={nav.onClick}>{nav.name}</div>;
+      const navDiv = nav.onClick ? clickDiv : linkDiv;
 
       return (
         <div className="nav nav-txt right" key={index}>
-          <Link blank={nav.blank} url={nav.url} txt={nav.name} />
+          {navDiv}
         </div>
       );
     });
